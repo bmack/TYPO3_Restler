@@ -18,16 +18,9 @@ use Aoe\Restler\System\Dispatcher;
 use TYPO3\CMS\Core\Core\Bootstrap;
 use TYPO3\CMS\Core\Http\RequestHandlerInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Object\ObjectManager;
 
 /**
- * This is the main entry point of the TypoScript driven standard front-end
- *
- * Basically put, this is the script which all requests for TYPO3 delivered pages goes to in the
- * frontend (the website). The script instantiates a $TSFE object, includes libraries and does a little logic here
- * and there in order to instantiate the right classes to create the webpage.
- * Previously, this was called index_ts.php and also included the logic for the lightweight "eID" concept,
- * which is now handled in a separate request handler (EidRequestHandler).
+ * This is the main entry point for everything starting with /api/
  */
 class RestRequestHandler implements RequestHandlerInterface
 {
